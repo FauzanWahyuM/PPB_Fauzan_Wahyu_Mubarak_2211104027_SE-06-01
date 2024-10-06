@@ -4,15 +4,15 @@ void main() {
   print("Masukkan nilai: ");
   int nilai = int.parse(stdin.readLineSync()!);
 
-  bool isPrime(int number) {
-    if (number <= 1) return false;
-    for (int i = 2; i * i <= number; i++) {
-      if (number % i == 0) return false;
+  bool Prima(int angka) {
+    if (angka <= 1) return false;
+    for (int i = 2; i * i <= angka; i++) {
+      if (angka % i == 0) return false;
     }
     return true;
   }
 
-  String result = isPrime(nilai)
+  String result = Prima(nilai)
       ? "$nilai adalah bilangan prima"
       : "$nilai bukan bilangan prima";
   print(result);
